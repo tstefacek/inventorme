@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "./Login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -18,7 +19,6 @@ export default function Login() {
       });
 
       if (response.status === 200) {
-
         const authToken = response.data.token;
         const userId = response.data.userId;
         localStorage.setItem("token", authToken);
@@ -26,23 +26,20 @@ export default function Login() {
 
         navigate("/items");
       }
-
     } catch (err) {
       if (err.response && err.response.status === 401) {
         alert("Login failed. Please check your email and password.");
       } else {
-        alert("An error occurred. Please try again later.");
+        alert("User credentials don't exist. Please register.");
       }
     }
-
   }
 
   return (
-    <div className="Login">
-      <h1 className="m-5 text-center">Log In</h1>
-      <Form onSubmit={handleSubmit}>
+    <div id="login-container">
+      <Form id="login-form" onSubmit={handleSubmit}>
         <Form.Group controlId="formEmail" className="m-5">
-          <Form.Label>Email: </Form.Label>
+          <Form.Label>Email:</Form.Label>
           <Form.Control
             type="email"
             value={email}
@@ -61,14 +58,15 @@ export default function Login() {
             required
           ></Form.Control>
         </Form.Group>
-        <Button
-          id="login-submit-button"
-          className="mx-5"
-          variant="primary"
-          type="submit"
-        >
-          Submit
-        </Button>
+        <div className="text-center">
+          <Button
+            className="mx-auto submit-button"
+            variant="primary"
+            type="submit"
+          >
+            Submit
+          </Button>
+        </div>
       </Form>
     </div>
   );
