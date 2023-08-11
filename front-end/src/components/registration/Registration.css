@@ -1,7 +1,12 @@
+@font-face {
+  font-family: "Work Sans" ;
+  src: url(/public/WorkSans-Regular.ttf);
+}
 html {
   background-color: #dad7cd;
 }
 #registration-container {
+  font-family: "Work Sans SemiBold", sans-serif;
   width: 100%;
   height: 100%;
   margin: 50px auto;

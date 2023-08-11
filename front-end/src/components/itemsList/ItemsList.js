@@ -71,7 +71,7 @@ export default function ItemsList() {
       <h1 id="item-header" className="m-5 text-center">
         Items List
       </h1>
-      <div id="table-crud-items">
+      <div id="search-row">
         <div id="search-elements">
           <p> Search: </p>
           <input
@@ -79,7 +79,6 @@ export default function ItemsList() {
             className="text-center"
             type="text"
             onChange={(e) => setSearch(e.target.value.toLowerCase())}
-            placeholder="name, description, or location"
           />
         </div>
         <button
@@ -90,15 +89,14 @@ export default function ItemsList() {
           <i className="bi bi-plus"></i>
         </button>
       </div>
-      <div id="item-table" class="table-responsive-sm">
-        <table className="table table-bordered table-responsive text-wrap table-sm">
+        <table id="items-table" className="table table-bordered table-responsive text-wrap table-sm .thead-dark">
           <thead>
-            <tr className="table-light text-dark text-center">
-              <td> ID </td>
-              <td> Name </td>
-              <td class="test"> Quantity </td>
-              <td> Description </td>
-              <td class="test"> Location </td>
+            <tr>
+              <th scope="row"> ID </th>
+              <th scope="col"> Name </th>
+              <th scope="col"> Quantity </th>
+              <th scope="col"> Description </th>
+              <th scope="col"> Location </th>
               <td></td>
               <td>
                 <button
@@ -123,7 +121,7 @@ export default function ItemsList() {
               })
               .map((item) => (
                 <tr key={item.id}>
-                  <td> {item.id} </td>
+                  <th scope="row">{item.id}</th>
                   <td> {item.itemName} </td>
                   <td> {item.itemQuantity} </td>
                   <td> {item.description} </td>
@@ -159,7 +157,7 @@ export default function ItemsList() {
                     )}
                   </Popup>
                   <td>
-                    <label>
+                    <label id="checkbox-label">
                       <input
                         id="checkbox"
                         type="checkbox"
@@ -172,7 +170,6 @@ export default function ItemsList() {
               ))}
           </tbody>
         </table>
-      </div>
     </body>
   );
 }

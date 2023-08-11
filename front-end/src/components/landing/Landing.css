@@ -1,19 +1,18 @@
-#landing-body {
-  height: 100vh;
-  background-color: #dad7cd;
+#body {
+  margin: 10px;
+  padding: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 figure {
+  background-image:none;
   display: flex;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
 }
 #logo {
-  margin-top: 150px;
-  max-width: 100%;
-  height: auto;
-  display: block;
+  margin-top: 200px;
+  max-height: 300px;
 }

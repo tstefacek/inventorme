@@ -6,6 +6,7 @@ html {
     display: flex;
     justify-content: center;
     background-color: #dad7cd;
+    font-family: "Work Sans SemiBold", sans-serif;
 }
 .submit-button {
     background-color: #588157;
