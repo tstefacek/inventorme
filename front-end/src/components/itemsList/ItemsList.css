@@ -1,13 +1,16 @@
 @font-face {
-  font-family: "Work Sans" ;
+  font-family: "Work Sans";
   src: url(/public/WorkSans-Regular.ttf);
   font-family: "Work Sans SemiBold";
-  src: url(/public/WorkSans-SemiBold.ttf)
+  src: url(/public/WorkSans-SemiBold.ttf);
 }
 
-body {
+#items-list-section {
   height: 100vh;
   margin-top: 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
   background-color: #dad7cd;
   font-family: "Work Sans", sans-serif;
@@ -29,7 +32,6 @@ h1 {
 }
 #search-row {
   width: 800px;
-
   display: flex;
   justify-content: space-between;
   align-content: center;
@@ -51,10 +53,10 @@ h1 {
   margin-left: 25%;
 }
 #checkbox-label {
-width: 100%;
-height: 30px;
-display: flex;
-justify-content: center;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
 }
 #items-table {
   width: 800px;

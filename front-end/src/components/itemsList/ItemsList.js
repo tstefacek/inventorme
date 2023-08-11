@@ -67,7 +67,7 @@ export default function ItemsList() {
     }
   }
   return (
-    <body>
+    <section id="items-list-section">
       <h1 id="item-header" className="m-5 text-center">
         Items List
       </h1>
@@ -170,6 +170,6 @@ export default function ItemsList() {
               ))}
           </tbody>
         </table>
-    </body>
+    </section>
   );
 }
