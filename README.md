@@ -1,6 +1,6 @@
 ### Overview
 
-Adatabase creation application that includes user registration, authentication, and CRUD functionality.
+A database creation application that includes user registration, authentication, and CRUD functionality.
 
 ### Technologies
 - Java
